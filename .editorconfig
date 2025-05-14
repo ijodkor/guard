@@ -1,0 +1,42 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = false
+max_line_length = 120
+tab_width = 4
+ij_continuation_indent_size = 4
+ij_formatter_off_tag = @formatter:off
+ij_formatter_on_tag = @formatter:on
+ij_formatter_tags_enabled = true
+ij_smart_tabs = false
+ij_visual_guides =
+ij_wrap_on_typing = false
+
+[*.php]
+ij_php_anonymous_brace_style = end_of_line
+ij_php_block_brace_style = end_of_line
+ij_php_class_brace_style = end_of_line
+ij_php_lambda_brace_style = end_of_line
+ij_php_method_brace_style = end_of_line
+
+ij_php_line_comment_at_first_column = false
+ij_php_keep_simple_classes_in_one_line = true
+ij_php_keep_simple_methods_in_one_line = true
+ij_any_keep_simple_blocks_in_one_line = true
+ij_php_space_before_closure_left_parenthesis = false
+
+ij_php_parentheses_expression_new_line_after_left_paren = false
+ij_php_parentheses_expression_right_paren_on_new_line = false
+ij_php_space_before_method_parentheses = false
+ij_php_space_after_colon = true
+ij_php_space_after_comma = true
+ij_php_space_after_for_semicolon = true
+ij_php_space_after_quest = true
+ij_php_space_after_type_cast = false
+ij_php_space_after_unary_not = false
+ij_php_space_before_colon = true
+ij_php_space_before_comma = false
