@@ -37,11 +37,7 @@ class RoleHasMiddleware {
             return $this->fail([], "User have not any role!", 403);
         }
 
-        $roles = $this->userRoleService->all();
-        $roleId = $payload->get('role_id');
-        $role = $roles
-            ->where('id', $roleId)
-            ->first();
+        $role = $this->userRoleService->get($roleId);
         if (!$role) {
             return $this->fail([], "User have not any role!", 403);
         }

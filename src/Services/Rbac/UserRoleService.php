@@ -43,6 +43,10 @@ class UserRoleService {
         return UserRole::query()->findOrFail($id);
     }
 
+    public function get(int $id): ?UserRole {
+        return UserRole::query()->find($id);
+    }
+
     public function update(int $id, array $data): UserRole {
         $model = $this->find($id);
         $model->update($data);

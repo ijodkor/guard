@@ -17,6 +17,37 @@ Publish migrations
 php artisan vendor:publish --provider="Ijodkor\Guard\GuardServiceProvider" --tag="guard-migrations"
 ```
 
+Adjust multischeme for project to service provider
+```php 
+AppServiceProvider ...
+
+/**
+* Bootstrap any application services.
+*/
+public function boot(): void {
+    $main = database_path('migrations');
+    $directories = ['public', 'users', 'rbac'];
+    $paths = [];
+    foreach ($directories as $directory) {
+        $paths[] = database_path('migrations' . DIRECTORY_SEPARATOR . $directory);
+    }
+
+    $paths = array_merge([$main], $paths);
+    $this->loadMigrationsFrom($paths);
+}
+```
+
+And define search path of schemas to database.php
+```php
+...
+'pgsql' => [
+    'driver' => 'pgsql',
+    ....
+    'search_path' => SchemeList::schemas(),
+],
+...
+```
+
 Run migration
 
 ```bash
@@ -54,7 +85,6 @@ use Ijodkor\Guard\Models\User as GuardUser;
 class User extends GuardUser {
 
 }
-
 ...
 ```
 
