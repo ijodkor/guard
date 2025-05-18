@@ -93,6 +93,7 @@ class User extends GuardUser {
 ### Links
 
 - [HasManyThrough](https://dev.to/mahmudulhsn/laravel-has-many-through-relationship-explained-with-example-22p4)
+- [Get route name in middleware](https://laracasts.com/discuss/channels/general-discussion/get-controlller-name-and-action-in-middleware)
 
 ## Remainder
 
